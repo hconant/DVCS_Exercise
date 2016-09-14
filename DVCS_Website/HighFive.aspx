@@ -1,16 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HighFive.aspx.cs" Inherits="High_Five" %>
+﻿<%@ Page Title="HighFive" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="HighFive.aspx.cs" Inherits="High_Five" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+    <div class="page-header">
+        <h1>Give A High Five!</h1>
     </div>
-    </form>
-</body>
-</html>
+
+    <div class="row col-md-12">
+        <fieldset>
+            <asp:Label ID="Lable1" runat="server" Text="Give a high five?" AssociatedControlID="HighFiveOptions"></asp:Label>
+            <asp:RadioButtonList ID="HighFiveOptions" runat="server">
+                <asp:ListItem Value="1">Yes</asp:ListItem>
+                <asp:ListItem Value="2">No</asp:ListItem>
+            </asp:RadioButtonList>
+        </fieldset>
+        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+        <asp:Label ID="Message" runat="server" Text="Label"></asp:Label>
+    </div>
+
+</asp:Content>
